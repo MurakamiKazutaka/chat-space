@@ -57,3 +57,15 @@ Things you may want to cover:
 ### Association
 - has_many :messages
 - has_many :groups
+
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|massage_id|integer|null: false, foreign_key: true|
+
+### Association
+- has_many :messages
+- has_many :users thought groups_users
