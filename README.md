@@ -46,3 +46,14 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :group
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|e-mail|string|null: false|
+
+### Association
+- has_many :messages
+- has_many :groups
