@@ -56,7 +56,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :messages
-- has_many :groups
+- has_many :groups thought: :groups_users
 
 ## groupsテーブル
 
@@ -68,4 +68,4 @@ Things you may want to cover:
 
 ### Association
 - has_many :messages
-- has_many :users thought groups_users
+- has_many :users thought: :groups_users
