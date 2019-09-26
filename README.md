@@ -54,6 +54,8 @@ Things you may want to cover:
 |name|string|null: false|
 |e-mail|string|null: false|
 
+- add_index :users, :name
+
 ### Association
 - has_many :messages
 - has_many :groups_users
