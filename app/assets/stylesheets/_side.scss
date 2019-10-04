@@ -1,0 +1,48 @@
+@import "./variables";
+
+.chat__side{
+    &__top{
+        background-color: #253141;
+        width: $side-width;
+        height: 100px;
+        @include side-padding;
+        @include box-sizing(border-box);
+        display: flex;
+        align-items: center;
+        &__contents-box{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            &__user-name{
+                @include font(16px, bold, white);
+            }
+            &__icon {
+                display: flex;
+                .icon{
+                    color: #ffffff;
+                }
+                .setting{
+                    margin-left: 0.3rem;
+                }
+            }
+        }
+    }
+
+    &__bottom{
+        background-color: #2f3e51;
+        width: $side-width;
+        height: calc(100vh - 100px);
+        @include side-padding;
+        @include box-sizing(border-box);
+        overflow: scroll;
+        padding-top: 20px;
+            &__group-list{
+                &__name{
+                    @include font(15px, bold, #ffffff);
+                }
+                &__message{
+                    @include font(11px, bold, #ffffff);
+                }
+            }
+    }
+}
