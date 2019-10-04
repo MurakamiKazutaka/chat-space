@@ -1,0 +1,101 @@
+@import "./variables";
+
+.chat__main{
+	width: $main-width;
+
+	&__header{
+		background-color: $bg-main-color;
+		width: $main-width;
+		height: 100px;
+		padding-top: 35px;
+		@include main-padding;
+		@include box-sizing(border-box);
+		display: flex;
+		&__group{
+			&__name{
+				@include font(20px, null, #333333)
+			}
+			&__member{
+				padding-top: 15px;
+				@include font(12px, null, #999999)
+			}
+		}
+		&__edit-btn{
+			background-color: $bg-main-color;
+			border:  1px solid $btn-color;
+			color: $btn-color;
+			height: 40px;
+			@include side-padding;
+			text-align: center;
+			line-height: 40px;
+			margin-left: auto;
+		}
+	}
+
+	&__message{
+		@include box-sizing(border-box);
+		background-color: #fafafa;
+		height: calc(100vh - 190px);
+		@include main-padding;
+		padding-top: 46px;
+		padding-bottom: 46px;
+		overflow: scroll;
+		&__box{
+			margin-bottom: 40px;
+			&__top{
+				display: flex;
+				&__name{
+					@include font(16px, bold, #434A54);
+				}
+				&__time{
+					@include font(12px, null, #999999);
+					padding-left: 12px;
+				}
+			}
+			&__text{
+				@include font(4px, null, #434A54);
+			}
+		}
+	}
+
+	&__footer{
+		height: 90px;
+		background-color: #dddddd;
+		display: flex;
+		@include box-sizing(border-box);
+		bottom: 0px;
+		padding: 20px;
+		width: $main-width;
+		position: relative;
+		input{
+			@include font(16px, null, #434A54);
+			height: 50px;
+			width: 100%;
+			border-style: none;
+			padding: 0 40px 0 10px;
+			margin-left: 40px;
+			display: flex;
+			align-items: center;
+			justify-items: center;
+		}
+		.fa-picture-o{
+			position: absolute;
+			right: 190px;
+			top: 37px;
+		}
+		&__form{
+			form{
+				background-color: $btn-color;
+				color: $bg-main-color;
+				height: 50px;
+				width: 100px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				margin-left: 15px;
+				margin-right: 40px;
+			}
+		}
+	}
+}

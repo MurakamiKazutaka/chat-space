@@ -1,0 +1,10 @@
+@import "./reset";
+@import "./variables";
+@import "./side";
+@import "./main";
+@import "font-awesome";
+
+.chat {
+	display: flex;
+	height: 100vh;
+}

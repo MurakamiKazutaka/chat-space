@@ -1,0 +1,25 @@
+$side-width: 300px;
+$main-width: calc(100vw-300px);
+$btn-color: #38AEF0;
+$bg-main-color: white;
+
+@mixin font($size: null, $weight: null, $color: null) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin side-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@mixin box-sizing($type){
+    -webkit-box-sizing:$type;
+    -moz-box-sizing:$type;
+    box-sizing:$type;
+}
+
+@mixin main-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+}
