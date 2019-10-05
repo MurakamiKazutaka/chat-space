@@ -3,6 +3,11 @@
 @import "./side";
 @import "./main";
 @import "font-awesome";
+@import "./color";
+@import "modules/user";
+@import "config/colors";
+@import "modules/flash";
+@import "modules/group";
 
 .chat {
 	display: flex;
