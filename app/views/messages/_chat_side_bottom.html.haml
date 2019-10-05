@@ -1,6 +1,8 @@
 .chat__side__bottom
-  .chat__side__bottom__group-list
-    .chat__side__bottom__group-list__name
-      test-group-name
-    .chat__side__bottom__group-list__message
-      test-group-message
+  - current_user.groups.each do |group|
+    .chat__side__bottom__group-list
+      = link_to group_messages_path(group) do
+        .chat__side__bottom__group-list__name
+          = group.name
+        .chat__side__bottom__group-list__message
+          no message
