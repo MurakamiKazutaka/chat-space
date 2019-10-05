@@ -37,11 +37,13 @@
 		overflow: scroll;
 		padding-top: 20px;
 		&__group-list{
+			padding: 20px 0 40px;
 			&__name{
 				@include font(15px, bold, #ffffff);
 			}
 			&__message{
 				@include font(11px, bold, #ffffff);
+				margin-top: 5px;
 			}
 		}
 	}
