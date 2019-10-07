@@ -59,42 +59,40 @@
 	}
 
 	&__footer{
-		height: 90px;
-		background-color: #dddddd;
-		display: flex;
-		@include box-sizing(border-box);
-		bottom: 0px;
-		padding: 20px;
-		width: $main-width;
-		position: relative;
-		input{
-			@include font(16px, null, #434A54);
-			height: 50px;
-			width: 100%;
-			border-style: none;
-			padding: 0 40px 0 10px;
-			margin-left: 40px;
-			display: flex;
-			align-items: center;
-			justify-items: center;
-		}
-		.fa-picture-o{
-			position: absolute;
-			right: 190px;
-			top: 37px;
-		}
 		&__form{
-			form{
-				background-color: $btn-color;
-				color: $bg-main-color;
+			height: 90px;
+			background-color: #dddddd;
+			@include box-sizing(border-box);
+			padding: 20px;
+			&__message{
+			height: 50px;
+			width: calc(100% - 150px);
+			border: none;
+			float: left;
+			}
+			&__mask{
+				background-color: white;
+				float: left;
 				height: 50px;
-				width: 100px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				cursor: pointer;
-				margin-left: 15px;
-				margin-right: 40px;
+				padding-right: 10px;
+				&__image {
+					font-size: 20px;
+					line-height: 50px;
+				}
+				.hidden {
+					display: none;
+				}
+			}
+			&__submit{
+			background-color: $btn-color;
+			border: none;
+			color: white;
+			height: 50px;
+			width: 100px;
+			float: right;
+			font-size: 16px;
+			margin-left: 15px;
+			padding: 0, 30px;
 			}
 		}
 	}

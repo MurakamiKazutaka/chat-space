@@ -1,8 +1,8 @@
-.chat__main__footer
-	%input(type="text")
-	%label.upload-label{for: "upload-icon"}
-		%i.fa.fa-picture-o
-	.chat__main__footer__form
-		%label(for="image")
-		%form(action="submit")
-			%p Send
+.chat__main__footer__form
+  = form_for [@group, @message] do |f|
+    = f.text_field :content, class: 'chat__main__footer__form__message', placeholder: 'type a message'
+    .chat__main__footer__form__mask
+      = f.label :image, class: 'form__mask__image' do
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'hidden'
+    = f.submit 'Send', class: 'chat__main__footer__form__submit'
