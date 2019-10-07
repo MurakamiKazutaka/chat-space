@@ -6,5 +6,5 @@
     .chat__main__border
       = render partial: "chat_main_header"
     .chat__main__masseges
-      = render partial: "chat_main_message"
+      = render partial: 'chat_main_message', collection: @messages, as:'message'
       = render partial: "chat_main_footer"
