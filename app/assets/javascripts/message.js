@@ -18,7 +18,7 @@ $(function(){
                     ${img}
                   </p>
                 </div>`
-                console.log(html)
+
   return html;
   }
   $('#new_message').on('submit', function(e){
@@ -36,7 +36,8 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#message_content').val('');
+      $('#message_content');
+      document.message[content].form__submit.reset()
 
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     })
