@@ -6,7 +6,7 @@
       test-member-name
   .right-header
     .right-header__button
-      edit
+      = link_to "Edit", edit_group_path(@group)
 
 .messages
   - @messages.each do |message|
