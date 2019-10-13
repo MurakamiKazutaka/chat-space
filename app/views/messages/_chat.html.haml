@@ -1,12 +1,15 @@
 .header
   .left-header
     .left-header__title
-      =current_user.name
-    .left-header__members
-      test-member-name
+      =@group.name
+    %ul.left-header__members
+      Memgers :
+      - @group.users.each do |user|
+        %li.member
+          = user.name
   .right-header
     .right-header__button
-      edit
+      = link_to "Edit", edit_group_path(@group)
 
 .messages
   - @messages.each do |message|
