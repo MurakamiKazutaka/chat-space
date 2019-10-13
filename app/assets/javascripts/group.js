@@ -82,8 +82,8 @@ $(document).on('turbolinks:load', function(){
 
     // documentではなく、なるべく近い親要素をレシーバにする
   $('.chat-group-form__field--right').on('click', '.chat-group-user__btn--add', function() {
-    var name = $(this).attr("data-user-name");
-    var user_id = $(this).attr("data-user-id");
+    var name = $(this).data("user-name");
+    var user_id = $(this).data("user-id");
     $(this).parent().remove();
     appendUserToMemberList(name, user_id);
   });
