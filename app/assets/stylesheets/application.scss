@@ -1,13 +1,18 @@
+
 @import "./reset";
 @import "./variables";
+@import "font-awesome";
+@import "config/colors";
 @import "./side-bar";
 @import "./chat";
-@import "font-awesome";
-@import "modules/user";
-@import "config/colors";
 @import "modules/flash";
-@import "modules/group";
+@import "group/group";
+@import "user";
 
+
+/* ==========================================================================
+  Layout
+   ========================================================================== */
 
 .wrapper {
 	display: flex;
