@@ -54,7 +54,6 @@ $(document).on('turbolinks:load', function(){
       var message = $('.message:last');
       //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
       last_message_id = message.data('message-id')
-      console.log(last_message_id)
       $.ajax({
         //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
         url: "api/messages",
@@ -65,18 +64,15 @@ $(document).on('turbolinks:load', function(){
         data: {id: last_message_id}
       })
       .done(function(messages) {
-        // console.log(messages)
         var insertHTML='';
           {messages.forEach(function(message){
             insertHTML = buildHTML(message);
             $('.messages').append(insertHTML);
             $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-            // console.log(insertHTML)
           });}
         })
       .fail(function() {
         alert("自動更新に失敗しました")
-        console.log('失敗')
       })
     } else{
     setInterval(reloadMessages, 5000);
