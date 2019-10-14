@@ -38,7 +38,6 @@ $(document).on('turbolinks:load', function(){
     search_list.empty();
   }
 
-
   //userを検索結果として表示するかを判定する
   function judgeSearchUserResult(users) {
     let user_apended_flag = false;
@@ -55,7 +54,7 @@ $(document).on('turbolinks:load', function(){
     return user_apended_flag;
   }
 
-  $('.chat-group-form__search.clearfix').on('keyup', '#user-search-field', function(e){
+  $('.chat-group-form__search').on('keyup', '#user-search-field', function(e){
     e.preventDefault();
     var input = $.trim($(this).val());
     if ((input.length > 0) && (pre_input != input)) {
@@ -80,15 +79,14 @@ $(document).on('turbolinks:load', function(){
       resetSearchUserResult();
     }
 
-    // documentではなく、なるべく近い親要素をレシーバにする
-  $('.chat-group-form__field--right').on('click', '.chat-group-user__btn--add', function() {
+  $('.chat-group-user').on('click', '.chat-group-user__btn--add', function() {
     var name = $(this).data("user-name");
     var user_id = $(this).data("user-id");
     $(this).parent().remove();
     appendUserToMemberList(name, user_id);
   });
 
-  $('.chat-group-form__field--right').on("click", '.user-search-remove', function() {
+  $('.chat-group-user').on("click", '.user-search-remove', function() {
     $(this).parent().remove();
   });
   });
