@@ -1,4 +1,5 @@
 $(document).on('turbolinks:load', function(){
+  setInterval(reloadMessages, 5000);
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : "";
     var img  = message.image ? `<img src="${ message.image }">` : "";
