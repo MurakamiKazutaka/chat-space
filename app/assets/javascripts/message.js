@@ -74,8 +74,7 @@ $(document).on('turbolinks:load', function(){
       .fail(function() {
         alert("自動更新に失敗しました")
       })
-    } else{
-    setInterval(reloadMessages, 5000);
     }
+    setInterval(reloadMessages, 5000);
   };
 });
