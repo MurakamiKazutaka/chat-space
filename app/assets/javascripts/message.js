@@ -51,7 +51,6 @@ $(document).on('turbolinks:load', function(){
   })
 
   var reloadMessages = function() {
-    setInterval(reloadMessages, 5000);
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
       var message = $('.message:last');
       //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
@@ -77,6 +76,5 @@ $(document).on('turbolinks:load', function(){
         alert("自動更新に失敗しました")
       })
     }
-    setInterval(reloadMessages, 5000);
   };
 });
