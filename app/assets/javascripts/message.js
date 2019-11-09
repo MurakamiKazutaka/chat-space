@@ -50,6 +50,7 @@ $(document).on('turbolinks:load', function(){
   })
 
   var reloadMessages = function() {
+    setInterval(reloadMessages, 5000);
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
       var message = $('.message:last');
       //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
